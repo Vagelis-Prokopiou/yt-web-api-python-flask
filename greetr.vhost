@@ -1,0 +1,30 @@
+<VirtualHost *:80>
+
+    ServerName localhost
+    ServerAlias localhost
+
+    DocumentRoot /home/va/projects/python/greetr
+
+    <Directory /home/va/projects/python/greetr>
+    <IfVersion < 2.4>
+        Order allow,deny
+        Allow from all
+    </IfVersion>
+    <IfVersion >= 2.4>
+        Require all granted
+    </IfVersion>
+    </Directory>
+
+    WSGIScriptAlias / /home/va/projects/python/greetr/greetr.wsgi
+
+    <Directory /home/va/projects/python/greetr>
+    <IfVersion < 2.4>
+        Order allow,deny
+        Allow from all
+    </IfVersion>
+    <IfVersion >= 2.4>
+        Require all granted
+    </IfVersion>
+    </Directory>
+
+</VirtualHost>

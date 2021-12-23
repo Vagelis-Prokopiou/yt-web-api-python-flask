@@ -1,5 +1,8 @@
 # https://auth0.com/blog/developing-restful-apis-with-python-and-flask/
 
+#  https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-debian-8
+#  https://www.digitalocean.com/community/tutorials/how-to-run-django-with-mod_wsgi-and-apache-with-a-virtualenv-python-environment-on-a-debian-vps
+
 from flask import Flask, jsonify
 
 app = Flask(__name__)
