@@ -16,7 +16,6 @@ def getUsers():
         strIndex = str(index)
         firstName = "FirstName" + strIndex
         lastName = "LastName" + strIndex
-        age = 25
         framework = "Python (Flask)"
         users.append({
             "index": index,
