@@ -1,13 +1,7 @@
+#!/usr/bin/python3
 import sys
-import site
-import os.path
+import logging
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0,"/home/va/projects/python/FlaskApp/")
 
-# Add custom site-packages directory
-your_env_package_dir = '/home/va/.virtualenvs/api/lib/python3.9/site-packages'
-site.addsitedir(your_env_package_dir)
-
-# Add greetr to system path
-app_path = os.path.dirname(__file__)
-sys.path.insert(0, app_path)
-
-from greetr import app as application
+from FlaskApp import app as application
