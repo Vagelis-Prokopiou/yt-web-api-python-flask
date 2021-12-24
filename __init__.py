@@ -33,3 +33,7 @@ def getUsers():
 @app.route("/users")
 def users():
     return jsonify(getUsers())
+
+
+if __name__ == "__main__":
+    app.run()
